@@ -1,78 +1,87 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package gegi
- */
-
-?>
-
 <?php wp_footer(); ?>
 
-<footer class="bg-gray-100">
-      <div class="container mx-auto px-6 pt-10 pb-6">
-        <div class="flex flex-wrap">
-          <div class="w-full md:w-1/4 text-center md:text-left">
-            <h5 class="uppercase mb-6 font-bold">Links</h5>
-            <ul class="mb-4">
-              <li class="mt-2">
-                <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">FAQ</a>
-              </li>
-              <li class="mt-2">
-                <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Help</a>
-              </li>
-              <li class="mt-2">
-                <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Support</a>
-              </li>
-            </ul>
-          </div>
-          <div class="w-full md:w-1/4 text-center md:text-left">
-            <h5 class="uppercase mb-6 font-bold">Legal</h5>
-            <ul class="mb-4">
-              <li class="mt-2">
-                <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Terms</a>
-              </li>
-              <li class="mt-2">
-                <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Privacy</a>
-              </li>
-            </ul>
-          </div>
-          <div class="w-full md:w-1/4 text-center md:text-left">
-            <h5 class="uppercase mb-6 font-bold">Social</h5>
-            <ul class="mb-4">
-              <li class="mt-2">
-                <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Facebook</a>
-              </li>
-              <li class="mt-2">
-                <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Linkedin</a>
-              </li>
-              <li class="mt-2">
-                <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Twitter</a>
-              </li>
-            </ul>
-          </div>
-          <div class="w-full md:w-1/4 text-center md:text-left">
-            <h5 class="uppercase mb-6 font-bold">Company</h5>
-            <ul class="mb-4">
-              <li class="mt-2">
-                <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Official Blog</a>
-              </li>
-              <li class="mt-2">
-                <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">About Us</a>
-              </li>
-              <li class="mt-2">
-                <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Contact</a>
-              </li>
-            </ul>
-          </div>
+<footer id="containerfooter" class="footerclass bg-violet-300" role="contentinfo">
+  <div class="container mx-auto py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Column 1 -->
+      <div class="footercol1">
+        <div class="widget-first footer-widget">
+          <aside class="widget widget_text">
+            <div class="textwidget">
+              RO 805300 Tecuci<br>
+              Transilvaniei, 7<br>
+              <a href="tel:+40752105000">Tel: +4 0752 105 000</a><br>
+              <a href="mailto:transport@gegi.ro">E-mail: transport@gegi.ro</a>
+            </div>
+          </aside>
         </div>
       </div>
-    </footer>
-</div><!-- #page -->
 
-</body>
-</html>
+      <!-- Column 2 -->
+      <div class="footercol2">
+        <div class="widget-first footer-widget">
+          <aside class="widget widget_text">
+            <div class="textwidget">
+              <!-- Additional content can be added here -->
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="footercol3">
+        <div class="widget-first footer-widget">
+          <aside class="widget widget_text">
+            <div class="textwidget">
+              <!-- Additional content can be added here -->
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="footercol4">
+        <div class="widget-first footer-widget">
+          <aside class="widget widget_text">
+            <div class="textwidget">
+              GEGI SRL<br>
+              Cod fiscal RO6466990<br>
+              Nr.Reg.Com. J17/2796/1994
+            </div>
+          </aside>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer Credits -->
+    <div class="footercredits text-center mt-8">
+      <p>&copy; 2024 Gegi Turism - Theme developed by <a style="color: #FFFF00"" href="https://github.com/bogdiw" target="_blank">Frățiman Bogdan-Gabriel</a></p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  html, body {
+    height: 100%;
+  }
+
+  #containerfooter {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .footerclass {
+    background-color: #8b5cf6;
+    color: #ffffff;
+  }
+
+  .footercol1,
+  .footercol2,
+  .footercol3,
+  .footercol4 {
+    padding: 20px;
+  }
+</style>
