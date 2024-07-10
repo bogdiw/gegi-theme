@@ -57,7 +57,7 @@
 
     <!-- Footer Credits -->
     <div class="footercredits text-center mt-8">
-      <p>&copy; 2024 Gegi Turism - Theme developed by <a style="color: #FFFF00"" href="https://github.com/bogdiw" target="_blank">Frățiman Bogdan-Gabriel</a></p>
+      <p>&copy; 2024 Gegi Turism - Theme developed by <a style="color: #FFFF00"" href="https://linkedin.com/in/bogdan-gabriel-fratiman" target="_blank">Frățiman Bogdan-Gabriel</a></p>
     </div>
   </div>
 </footer>
