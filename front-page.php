@@ -20,7 +20,7 @@
 
         <!-- Inchiriere Autocare -->
         <div class="col-span-1">
-            <a href="#">
+            <a href="<?php echo get_permalink(get_page_by_title('Autocare')); ?>">
                 <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
                     <div class="bg-blue-500 p-6 rounded mb-4">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/inchiriere-alb-150x150.png" alt="Inchiriere Autocare" class="w-24 h-24 mx-auto">
