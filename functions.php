@@ -182,3 +182,108 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 add_filter('show_admin_bar', '__return_false');
 
 
+/**
+ * Custom Post Types.
+ */
+
+if( function_exists('acf_add_options_page') ) {
+
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Gegi Settings',
+		'menu_title'	=> 'Gegi',
+		'menu_slug' 	=> 'gegi-settings',
+		'capability'	=> 'edit_posts',
+		'icon_url' => 'dashicons-admin-customizer',
+		'redirect'		=> true
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Setari',
+		'menu_title'	=> 'Setari',
+		'parent_slug'	=> 'gegi-settings',
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Single Post Page',
+		'menu_title'	=> 'Single Post Page',
+		'parent_slug'	=> 'gegi-settings',
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Curse',
+		'menu_title'	=> 'Curse',
+		'parent_slug'	=> 'gegi-settings',
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Servicii',
+		'menu_title'	=> 'Servicii',
+		'parent_slug'	=> 'gegi-settings',
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Popup',
+		'menu_title'	=> 'Popup',
+		'parent_slug'	=> 'gegi-settings',
+	));
+	
+}
+
+/**
+ * Custom Buses Post Type.
+ */
+	
+add_action( 'init', 'create_buses' );
+function create_buses() {
+	register_post_type( 'bus',
+		array(
+			'labels' => array(
+				'name' => __( 'Bus' ),
+				'singular_name' => __( 'Bus' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'menu_icon' => get_template_directory_uri().'/images/bus.svg',
+			'publicly_queryable' => false
+
+		)
+	);
+};
+
+/**
+ * Custom Cars Post Type.
+ */
+
+add_action( 'init', 'create_cars' );
+function create_cars() {
+	register_post_type( 'car',
+		array(
+			'labels' => array(
+				'name' => __( 'Cars' ),
+				'singular_name' => __( 'Car' )
+			),
+			'public' => true,
+			'has_archive' => false,
+			'menu_icon' => 'dashicons-car',
+			'publicly_queryable' => true,
+			'supports'=> array( 'title', 'editor','thumbnail' )
+
+		)
+	);
+};
+
+/**
+ * Custom FAQ Post Type.
+ */
+
+add_action( 'init', 'create_faq' );
+function create_faq() {
+	register_post_type( 'faq',
+		array(
+			'labels' => array(
+				'name' => __( 'FAQ' ),
+				'singular_name' => __( 'FAQ' )
+			),
+			'public' => true,
+			'has_archive' => false,
+			'menu_icon' => 'dashicons-post-status',
+			'publicly_queryable' => false
+		)
+	);
+};
