@@ -1,5 +1,9 @@
-<?php /* Template Name: Bus */
-get_header(); ?>
+<?php
+/*
+Template Name: Bus
+*/
+get_header();
+?>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <link rel="stylesheet" href="magnific-popup.css">
@@ -7,22 +11,255 @@ get_header(); ?>
 <script src="js/jquery.magnific-popup.js"></script>
 
 <style>
-.contact-info {
-    text-align: center;
-}
+    /* Stilurile CSS existente */
+    .contact-info {
+        text-align: center;
+    }
 
-.contact-info a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 200px;
-    text-align: center;
-}
+    .contact-info a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 200px;
+        text-align: center;
+    }
 
-.rent {
-    text-align: center;
-}
+    .rent {
+        text-align: center;
+    }
+
+    .form-rent-bus-container {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    .form-rent-bus-container .wpcf7-form-control-wrap {
+        margin-bottom: 15px;
+    }
+
+    .form-rent-bus-container label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-rent-bus-container input,
+    .form-rent-bus-container textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-rent-bus-container input[type="submit"] {
+        background-color: #0073e6;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .form-rent-bus-container input[type="submit"]:hover {
+        background-color: #005bb5;
+    }
+
+    .form-rent-bus .inputx2 span,
+    .form-rent-bus .inputx2 label {
+        font-weight: bold;
+    }
+
+    .form-rent-bus .inputx2 span,
+    .form-rent-bus .inputx2 label span {
+        font-weight: bold;
+    }
+
+    .form-rent-bus-container .form-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .form-rent-bus-container .form-row .form-group {
+        flex: 1;
+        padding: 10px;
+    }
+
+    @media (max-width: 767px) {
+        .bus-info {
+            flex-direction: column;
+        }
+
+        .bus-info > div {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .bus-info .details {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .bus-info .details .top h2 {
+            text-align: center;
+        }
+
+        .bus-info .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-left: 0;
+        }
+
+        .bus-info .features > div {
+            width: 100%;
+            padding: 2px 0;
+        }
+
+        .bus-info .details .bottom {
+            text-align: center;
+        }
+
+        .bus-info .details .bottom .button {
+            margin-top: 10px;
+        }
+    }
+
+    .bus-info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bus-info > div {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .bus-info .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bus-info .details .top,
+    .bus-info .details .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bus-info .features {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 10px;
+    }
+
+    .bus-info .features > div {
+        width: 50%;
+        padding: 2px 0;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .form-rent-bus {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .form-rent-bus .form-col {
+        flex: 1;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .form-rent-bus label {
+        display: block;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    .form-rent-bus input[type="text"],
+    .form-rent-bus input[type="email"],
+    .form-rent-bus input[type="tel"],
+    .form-rent-bus textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .form-rent-bus .inputx2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .form-rent-bus .inputx2 label {
+        flex: 1;
+        position: relative;
+    }
+
+    .form-rent-bus .inputx2 label .icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .form-rent-bus .inputx2 label .icon svg {
+        width: 16px;
+        height: 16px;
+        fill: #333;
+    }
+
+    .form-rent-bus .text-center {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .form-rent-bus input[type="submit"] {
+        background-color: #0073e6;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .form-rent-bus input[type="submit"]:hover {
+        background-color: #005bb5;
+    }
+
+    .form-rent-bus-container h3 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .form-rent-bus-container h4 {
+        font-size: 18px;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+
+    .form-rent-bus label.perioada,
+    .form-rent-bus label.ruta-inchiriere {
+        margin-bottom: 20px;
+    }
+
+    /* Stilurile existente pentru galeria de imagini și pop-up */
+    .popup-gallery {
+        display: none;
+    }
 
 </style>
 
@@ -67,7 +304,7 @@ get_header(); ?>
 </div>
 
 <div class="buses container mx-auto py-8">
-    <div class="grid grid-cols-1 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <?php
         $args = array(
             'post_type'      => 'bus',
@@ -81,49 +318,51 @@ get_header(); ?>
                 $bus_id = get_the_ID();
                 $first_image = get_field( 'bus_imagine' );
                 $images = get_field( 'gelerie_bus', $bus_id );
+                $numar_locuri = get_field( 'nr_locuri' );
+                $disponibilitate = get_field( 'disponibilitate' );
+                $marca = get_field( 'marca_bus' );
+                $model = get_field( 'model_bus' );
         ?>
                 <div class="shadow-md rounded p-6 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg bg-gray-100">
-                    <div class="flex flex-wrap md:flex-nowrap">
-                        <div class="w-full md:w-1/3 mb-4 md:mb-0">
+                    <div class="bus-info">
+                        <div>
                             <a href="<?php echo esc_url( $first_image ); ?>" class="block mb-4 popup-gallery-<?php echo $bus_id; ?>" title="<?php echo esc_attr( get_the_title() ); ?>">
                                 <img src="<?php echo esc_url( $first_image ); ?>" alt="" class="w-full rounded-lg">
                             </a>
                         </div>
-                        <div class="w-full md:w-2/3 text-center md:text-left md:pl-4">
-                            <div class="flex justify-between items-start">
+                        <div class="details">
+                            <div class="top">
+                                <h2 class="text-3xl font-bold mb-2"><?php echo get_the_title(); ?></h2>
                                 <div>
-                                    <h2 class="text-3xl font-bold mb-2"><?php echo get_the_title(); ?></h2>
-                                </div>
-                                <div class="text-right">
-                                    <span class="block">
-                                        <strong class="text-3xl"><?php the_field( 'nr_locuri' ); ?> <span class="text-xl"><?php _e('locuri')?></span></strong>
-                                    </span>
-                                    <div class="text-gray-600 mb-2"><?php _e('Disponibilitate')?>: <?php the_field( 'disponibilitate' ); ?> <?php echo (get_field('disponibilitate') == 1) ? __('masina') : __('masini'); ?></div>
+                                    <strong class="text-3xl"><?php echo $numar_locuri; ?> <span class="text-xl"><?php _e('locuri')?></span></strong>
+                                    <div class="text-gray-600 mb-2"><?php _e('Disponibilitate')?>: <?php echo $disponibilitate; ?> <?php echo ($disponibilitate == 1) ? __('masina') : __('masini'); ?></div>
                                 </div>
                             </div>
-                            <span class="text-gray-600 block mb-2 font-bold"><?php _e('Dotari interioare')?></span>
-                            <div class="flex flex-wrap pl-4 mb-4">
-                                <?php
-                                if ( have_rows( 'dotari_interioare' ) ) :
-                                    while ( have_rows( 'dotari_interioare' ) ) : the_row();
-                                ?>
-                                        <div class="w-full md:w-1/2 mb-2"><?php the_sub_field( 'dotare' ); ?></div>
-                                <?php
-                                    endwhile;
-                                endif;
-                                ?>
+                            <div class="bottom">
+                                <span class="text-gray-600 block mb-2 font-bold"><?php _e('Dotari interioare')?></span>
+                                <div class="features">
+                                    <?php
+                                    if ( have_rows( 'dotari_interioare' ) ) :
+                                        while ( have_rows( 'dotari_interioare' ) ) : the_row();
+                                    ?>
+                                            <div><?php the_sub_field( 'dotare' ); ?></div>
+                                    <?php
+                                        endwhile;
+                                    endif;
+                                    ?>
+                                </div>
                             </div>
                             <a href="#" class="button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full inline-block" data-bus="<?php echo 'bus-' . $bus_id; ?>"><span style="color: #FFFFFF" class="close">Solicita oferta</span></a>
                         </div>
                     </div>
                     <!-- Container pentru formularul de închiriere -->
-                    <div class="form-rent-bus-container bg-gray-100 p-4 rounded-lg mb-4 hidden" id="<?php echo 'bus-' . $bus_id; ?>">
-                        <div class="flex flex-wrap">
-                            <div class="w-full">
-                                <div class="container-form-bus bg-white p-4 rounded-lg mb-4">
-                                    <?php echo do_shortcode( '[contact-form-7 id="1306" title="Formular autocare"]' ); ?>
-                                </div>
-                            </div>
+                    <div class="form-rent-bus-container hidden" id="<?php echo 'bus-' . $bus_id; ?>">
+                        <div class="container-form-bus bg-white p-4 rounded-lg mb-4">
+                            <h3><strong><?php echo $marca; ?></strong></h3>
+                            <h4>Model: <?php echo $model; ?></h4>
+                            <p><?php _e('Disponibilitate')?>: <?php echo $disponibilitate; ?> <?php echo ($disponibilitate == 1) ? __('masina') : __('masini'); ?></p>
+                            <p><?php _e('Numar locuri')?>: <?php echo $numar_locuri; ?></p>
+                            <?php echo do_shortcode( '[contact-form-7 id="1306" title="Formular autocare"]' ); ?>
                         </div>
                     </div>
                     <!-- Magnific Popup pentru galerie imagini -->
@@ -143,6 +382,24 @@ get_header(); ?>
 
 <script>
 jQuery(document).ready(function($) {
+    // Toggle form visibility with slide animation
+    $('.button').on('click', function(e) {
+        e.preventDefault();
+        var busId = $(this).data('bus');
+        var formContainer = $('#' + busId);
+        
+        // Toggle form visibility with slide animation
+        formContainer.slideToggle(300, function() {
+            // Toggle text of close/open button
+            var buttonText = $(this).prev().find('.close');
+            if ($(this).is(':visible')) {
+                buttonText.text('Inchide solicitarea');
+            } else {
+                buttonText.text('Solicita oferta');
+            }
+        });
+    });
+
     // Initialize Magnific Popup for each bus gallery
     <?php
     $loop = new WP_Query( $args );
@@ -161,22 +418,10 @@ jQuery(document).ready(function($) {
     endif;
     wp_reset_postdata();
     ?>
-
-    // Toggle form visibility
-    $('.button').on('click', function(e) {
-        e.preventDefault();
-        var busId = $(this).data('bus');
-        $('#' + busId).toggleClass('hidden');
-        var buttonText = $(this).find('.close');
-        if (buttonText.text() === 'Solicita oferta') {
-            buttonText.text('Inchide solicitarea');
-        } else {
-            buttonText.text('Solicita oferta');
-        }
+    flatpickr(".datepicker", {
+        dateFormat: "Y-m-d",
     });
 });
-
 </script>
 
 <?php get_footer(); ?>
-
