@@ -287,3 +287,12 @@ function create_faq() {
 		)
 	);
 };
+
+function custom_theme_scripts() {
+    // Magnific Popup CSS
+    wp_enqueue_style('magnific-popup', get_stylesheet_directory_uri() . '/magnific-popup.css', array(), '1.0', 'all');
+
+    // jQuery Magnific Popup
+    wp_enqueue_script('jquery-magnific-popup', get_stylesheet_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'custom_theme_scripts');
