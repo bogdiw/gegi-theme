@@ -11,7 +11,6 @@ get_header();
 <script src="js/jquery.magnific-popup.js"></script>
 
 <style>
-    /* Stilurile CSS existente */
     .contact-info {
         text-align: center;
     }
@@ -256,7 +255,6 @@ get_header();
         margin-bottom: 20px;
     }
 
-    /* Stilurile existente pentru galeria de imagini și pop-up */
     .popup-gallery {
         display: none;
     }
@@ -264,7 +262,8 @@ get_header();
 </style>
 
 <!-- Hero Section -->
-<div class="relative bg-cover bg-center h-96" style="background-image: url('<?php $image = get_field('imagine_jos_bus'); if( $image ) { echo wp_get_attachment_image_url( $image, 'full' ); } ?>');">
+<div class="relative h-96">
+    <div class="bg-cover bg-center absolute inset-0" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/autocare.jpg'); filter: brightness(1.4);"></div>
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="absolute inset-0 flex items-center justify-center">
         <div class="text-center text-white">
