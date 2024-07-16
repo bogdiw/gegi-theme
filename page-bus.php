@@ -259,6 +259,10 @@ get_header();
         display: none;
     }
 
+    button:focus, 
+    a:focus {
+        outline: none;
+    }
 </style>
 
 <!-- Hero Section -->

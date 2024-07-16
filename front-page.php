@@ -18,6 +18,19 @@
 <div class="container mx-auto p-6" style="padding-top: 100px;">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
 
+        <!-- Trasee si Grafice -->
+        <div class="col-span-1">
+            <a href="<?php echo get_permalink(get_page_by_title('Curse')); ?>">
+                <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
+                    <div class="bg-green-500 p-6 rounded mb-4">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/curse-alb-150x150.png" alt="Trasee si Grafice" class="w-24 h-24 mx-auto">
+                    </div>
+                    <h4 class="text-lg font-bold text-green-500 mb-2">Trasee si Grafice</h4>
+                    <p class="bg-white p-4 rounded">Informeaza-te cu ultimile modificari ale programelor si rutelor efectuate de masinile noastre. Vizualizeaza aceasta sectiune pentru a cunoaste oricare deviatie sau schimbare de rute.</p>
+                </div>
+            </a>
+        </div>
+
         <!-- Inchiriere Autocare -->
         <div class="col-span-1">
             <a href="<?php echo get_permalink(get_page_by_title('Autocare')); ?>">
@@ -27,6 +40,19 @@
                     </div>
                     <h4 class="text-lg font-bold text-blue-500 mb-2">Inchiriere Autocare</h4>
                     <p class="bg-white p-4 rounded">Te ajutam sa iti creezi traseele tale personalizate. Suntem langa tine oriunde, oricand pentru siguranta totala. Foarte multe solutii si servicii te asteapta, completate bineinteles de confort.</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Transfer Aeroport -->
+        <div class="col-span-1">
+            <a href="http://transfero.ro">
+                <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
+                    <div class="bg-yellow-500 p-6 rounded mb-4">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/avion-alb-150x150.png" alt="Transfer Aeroport" class="w-24 h-24 mx-auto">
+                    </div>
+                    <h4 class="text-lg font-bold text-yellow-500 mb-2">Transfer Aeroport</h4>
+                    <p class="bg-white p-4 rounded">Conexiune rapida cu Aeroportul International Henri Coanda – Otopeni. Rezerva-ti locurile sau vizualizeaza tarifele.</p>
                 </div>
             </a>
         </div>
@@ -44,20 +70,6 @@
             </a>
         </div>
 
-
-        <!-- Transfer Aeroport -->
-        <div class="col-span-1">
-            <a href="http://transfero.ro">
-                <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                    <div class="bg-yellow-500 p-6 rounded mb-4">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/avion-alb-150x150.png" alt="Transfer Aeroport" class="w-24 h-24 mx-auto">
-                    </div>
-                    <h4 class="text-lg font-bold text-yellow-500 mb-2">Transfer Aeroport</h4>
-                    <p class="bg-white p-4 rounded">Conexiune rapida cu Aeroportul International Henri Coanda – Otopeni. Rezerva-ti locurile sau vizualizeaza tarifele.</p>
-                </div>
-            </a>
-        </div>
-
         <!-- Turism -->
         <div class="col-span-1">
             <a href="#">
@@ -67,19 +79,6 @@
                     </div>
                     <h4 class="text-lg font-bold text-red-500 mb-2">Turism</h4>
                     <p class="bg-white p-4 rounded">Alaturi de partenerii nostri iti oferim cele mai frumoase vacante la cele mai avantajoase preturi.</p>
-                </div>
-            </a>
-        </div>
-
-        <!-- Trasee si Grafice -->
-        <div class="col-span-1">
-            <a href="<?php echo get_permalink(get_page_by_title('Curse')); ?>">
-                <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                    <div class="bg-green-500 p-6 rounded mb-4">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/curse-alb-150x150.png" alt="Trasee si Grafice" class="w-24 h-24 mx-auto">
-                    </div>
-                    <h4 class="text-lg font-bold text-green-500 mb-2">Trasee si Grafice</h4>
-                    <p class="bg-white p-4 rounded">Informeaza-te cu ultimile modificari ale programelor si rutelor efectuate de masinile noastre. Vizualizeaza aceasta sectiune pentru a cunoaste oricare deviatie sau schimbare de rute.</p>
                 </div>
             </a>
         </div>

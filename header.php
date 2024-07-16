@@ -46,6 +46,10 @@
             display: flex !important;
         }
     }
+    button:focus, 
+    a:focus {
+        outline: none;
+    }
     </style>
 </head>
 <body <?php body_class(); ?>>
