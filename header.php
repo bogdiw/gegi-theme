@@ -8,7 +8,6 @@
     <?php wp_head(); ?>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <style>
-        
     /* Remove border from dropdown button */
     .servicii-button {
         border: none;
@@ -18,6 +17,7 @@
     [x-cloak] {
         display: none !important;
     }
+
     /* Styles for phone button */
     .phone-icon {
         color: #FFFFFF;
@@ -51,12 +51,15 @@
     a:focus {
         outline: none;
     }
+    .backg {
+        background-color: #c50102;
+    }
     </style>
 </head>
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <body class="bg-gray-100">
-        <nav class="fixed top-0 w-full bg-red-700 shadow-md z-50" x-data="{ navbarOpen: false, dropdownOpen: false }"
+        <nav class="backg fixed top-0 w-full shadow-md z-50" x-data="{ navbarOpen: false, dropdownOpen: false }"
              :class="{ 'navbar-open': navbarOpen }">
             <!-- Container -->
             <div class="container flex flex-wrap px-4 py-2 mx-auto lg:space-x-4">
