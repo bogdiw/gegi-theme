@@ -117,7 +117,6 @@
         <div class="text-center text-white">
             <h1 class="text-4xl lg:text-6xl font-semibold"><?php _e('De acasa la aeroport si retur.') ?></h1>
             <p class="font-light text-lg lg:text-3xl mt-5"><?php _e('Servicii de transport si transfer aeroport.') ?></p>
-            <p class="font-light text-lg lg:text-3xl mt-5"><?php the_field('descriere_hero_bus'); ?></p>
         </div>
     </div>
 </div>

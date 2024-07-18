@@ -70,7 +70,7 @@
             </a>
         </div>
 
-        <!-- Turism -->
+        <!-- Cazare -->
         <div class="col-span-1">
             <a href="#">
                 <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
