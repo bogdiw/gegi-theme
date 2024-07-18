@@ -33,7 +33,7 @@
 
         <!-- Inchiriere Autocare -->
         <div class="col-span-1">
-            <a href="<?php echo get_permalink(get_page_by_title('Autocare')); ?>">
+            <a href="https://www.transfero.ro/inchiriere-autocare/">
                 <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
                     <div class="bg-blue-500 p-6 rounded mb-4">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/inchiriere-alb-150x150.png" alt="Inchiriere Autocare" class="w-24 h-24 mx-auto">
@@ -57,14 +57,14 @@
             </a>
         </div>
 
-        <!-- Rent-a-Car -->
+        <!-- Inchirieri Auto -->
         <div class="col-span-1">
-            <a href="#">
+            <a href="https://www.transfero.ro/rent-a-car-inchirieri-auto/">
                 <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
                     <div class="bg-orange-500 p-6 rounded mb-4">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/white-car.png" alt="Alte Servicii" class="w-24 h-24 mx-auto">
                     </div>
-                    <h4 class="text-lg font-bold text-orange-500 mb-2">Rent-a-Car</h4>
+                    <h4 class="text-lg font-bold text-orange-500 mb-2">Inchirieri Auto</h4>
                     <p class="bg-white p-4 rounded">Gegi este unul dintre principalii furnizori de servicii de inchirieri auto in Tecuci, Focsani si Barlad, oferind o gama larga de optiuni pentru clientii care au nevoie de un vehicul in diverse ocazii.</p>
                 </div>
             </a>
