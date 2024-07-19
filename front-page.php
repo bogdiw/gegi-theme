@@ -1,7 +1,75 @@
 <?php get_header(); ?>
 
+<style>
+    /* CSS Custom pentru serviciile de hover */
+    .service-card {
+        position: relative;
+        overflow: hidden;
+        color: white;
+        border-radius: 0.75rem;
+    }
+
+    .service-card img {
+        transition: transform 0.3s ease;
+        border-radius: inherit;
+    }
+
+    .service-card-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0);
+        transition: background 0.3s ease;
+        padding: 6px;
+        border-radius: inherit;
+        text-align: center;
+    }
+
+    .service-card-overlay h4,
+    .service-card-overlay a {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    .service-card-overlay p {
+        display: none;
+        transition: opacity 0.3s ease;
+        text-align: center;
+    }
+
+    .service-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .service-card:hover .service-card-overlay {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .service-card:hover .service-card-overlay p {
+        display: block;
+        opacity: 1;
+    }
+
+    .afla-mai-multe {
+        color: #FFFFFF;
+        background-color: #1E3A8A;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        border-radius: 0.375rem;
+        text-decoration: none;
+    }
+
+    .afla-mai-multe:hover {
+        background-color: #1E40AF;
+    }
+</style>
+
 <!-- Hero Section -->
-<div class="relative bg-cover bg-center h-96" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/prima-pagina-e1450789166952.png');">
+<div class="relative bg-cover bg-center h-96" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/banner.jpg');">
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="absolute inset-0 flex items-center justify-center">
         <div class="text-center text-white">
@@ -14,75 +82,70 @@
     </div>
 </div>
 
-<!-- Main Content Section -->
-<div class="container mx-auto p-6" style="padding-top: 100px;">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-
-        <!-- Trasee si Grafice -->
-        <div class="col-span-1">
-            <a href="<?php echo get_permalink(get_page_by_title('Curse')); ?>">
-                <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                    <div class="bg-green-500 p-6 rounded mb-4">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/curse-alb-150x150.png" alt="Trasee si Grafice" class="w-24 h-24 mx-auto">
-                    </div>
-                    <h4 class="text-lg font-bold text-green-500 mb-2">Trasee si Grafice</h4>
-                    <p class="bg-white p-4 rounded">Informeaza-te cu ultimile modificari ale programelor si rutelor efectuate de masinile noastre. Vizualizeaza aceasta sectiune pentru a cunoaste oricare deviatie sau schimbare de rute.</p>
-                </div>
-            </a>
+<!-- Services Section -->
+<section class="w-full px-6 py-10">
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Service 1: Grafice de calatorie / Turism -->
+        <div class="relative mb-6 service-card">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/grafice.jpg" alt="Trasee si Grafice" class="w-full h-72 object-cover rounded-md">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 rounded-md service-card-overlay">
+                <h4 class="text-2xl font-bold mb-4">Grafice de calatorie / Turism</h4>
+                <p class="text-base mb-6">
+                    Informeaza-te cu ultimile modificari ale programelor si rutelor efectuate de masinile noastre. Vizualizeaza aceasta sectiune pentru a cunoaste oricare deviatie sau schimbare de rute.
+                </p>
+                <a href="<?php echo get_permalink(get_page_by_title('Curse')); ?>" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+            </div>
         </div>
 
-        <!-- Inchiriere Autocare -->
-        <div class="col-span-1">
-            <a href="https://www.transfero.ro/inchiriere-autocare/">
-                <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                    <div class="bg-blue-500 p-6 rounded mb-4">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/inchiriere-alb-150x150.png" alt="Inchiriere Autocare" class="w-24 h-24 mx-auto">
-                    </div>
-                    <h4 class="text-lg font-bold text-blue-500 mb-2">Inchiriere Autocare</h4>
-                    <p class="bg-white p-4 rounded">Te ajutam sa iti creezi traseele tale personalizate. Suntem langa tine oriunde, oricand pentru siguranta totala. Foarte multe solutii si servicii te asteapta, completate bineinteles de confort.</p>
-                </div>
-            </a>
+        <!-- Service 2: Inchiriere Autocare -->
+        <div class="relative mb-6 service-card">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/inchiriere-autocar.jpg" alt="Inchiriere Autocare" class="w-full h-72 object-cover rounded-md">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 rounded-md service-card-overlay">
+                <h4 class="text-2xl font-bold mb-4">Inchiriere Autocare</h4>
+                <p class="text-base mb-6">
+                    Te ajutam sa iti creezi traseele tale personalizate. Suntem langa tine oriunde, oricand pentru siguranta totala. Foarte multe solutii si servicii te asteapta, completate bineinteles de confort.
+                </p>
+                <a href="https://www.transfero.ro/inchiriere-autocare/" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+            </div>
         </div>
 
-        <!-- Transfer Aeroport -->
-        <div class="col-span-1">
-            <a href="http://transfero.ro">
-                <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                    <div class="bg-yellow-500 p-6 rounded mb-4">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/avion-alb-150x150.png" alt="Transfer Aeroport" class="w-24 h-24 mx-auto">
-                    </div>
-                    <h4 class="text-lg font-bold text-yellow-500 mb-2">Transfer Aeroport</h4>
-                    <p class="bg-white p-4 rounded">Conexiune rapida cu Aeroportul International Henri Coanda – Otopeni. Rezerva-ti locurile sau vizualizeaza tarifele.</p>
-                </div>
-            </a>
+        <!-- Service 3: Transfer Aeroport -->
+        <div class="relative mb-6 service-card">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/trs2.jpg" alt="Transfer Aeroport" class="w-full h-72 object-cover rounded-md">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 rounded-md service-card-overlay">
+                <h4 class="text-2xl font-bold mb-4">Transfer Aeroport</h4>
+                <p class="text-base mb-6">
+                    Conexiune rapida cu Aeroportul International Henri Coanda – Otopeni. Rezerva-ti locurile sau vizualizeaza tarifele.
+                </p>
+                <a href="http://transfero.ro" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+            </div>
         </div>
 
-        <!-- Inchirieri Auto -->
-        <div class="col-span-1">
-            <a href="https://www.transfero.ro/rent-a-car-inchirieri-auto/">
-                <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                    <div class="bg-orange-500 p-6 rounded mb-4">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/white-car.png" alt="Alte Servicii" class="w-24 h-24 mx-auto">
-                    </div>
-                    <h4 class="text-lg font-bold text-orange-500 mb-2">Inchirieri Auto</h4>
-                    <p class="bg-white p-4 rounded">Gegi este unul dintre principalii furnizori de servicii de inchirieri auto in Tecuci, Focsani si Barlad, oferind o gama larga de optiuni pentru clientii care au nevoie de un vehicul in diverse ocazii.</p>
-                </div>
-            </a>
+        <!-- Service 4: Inchirieri Auto -->
+        <div class="relative mb-6 service-card">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/rent2.jpg" alt="Inchirieri Auto" class="w-full h-72 object-cover rounded-md">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 rounded-md service-card-overlay">
+                <h4 class="text-2xl font-bold mb-4">Inchirieri Auto</h4>
+                <p class="text-base mb-6">
+                    Gegi este unul dintre principalii furnizori de servicii de inchirieri auto in Tecuci, Focsani si Barlad, oferind o gama larga de optiuni pentru clientii care au nevoie de un vehicul in diverse ocazii.
+                </p>
+                <a href="https://www.transfero.ro/rent-a-car-inchirieri-auto/" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+            </div>
         </div>
 
-        <!-- Cazare -->
-        <div class="col-span-1">
-            <a href="#">
-                <div class="shadow-md rounded p-6 text-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
-                    <div class="bg-red-500 p-6 rounded mb-4">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/turn-alb.png" alt="Turism" class="w-24 h-24 mx-auto">
-                    </div>
-                    <h4 class="text-lg font-bold text-red-500 mb-2">Turism</h4>
-                    <p class="bg-white p-4 rounded">Alaturi de partenerii nostri iti oferim cele mai frumoase vacante la cele mai avantajoase preturi.</p>
-                </div>
-            </a>
+        <!-- Service 5: Cazare -->
+        <div class="relative mb-6 service-card">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/cazare.jpg" alt="Cazare" class="w-full h-72 object-cover rounded-md">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 rounded-md service-card-overlay">
+                <h4 class="text-2xl font-bold mb-4">Cazare</h4>
+                <p class="text-base mb-6">
+                    ???
+                </p>
+                <a href="#" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php get_footer(); ?>
