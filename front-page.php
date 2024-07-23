@@ -9,9 +9,22 @@
         border-radius: 0.75rem;
     }
 
+    .hero-section {
+        position: relative;
+        background-image: url('<?php echo get_template_directory_uri(); ?>/images/banner2.jpg');
+        background-size: cover;
+        background-position: center 80%;
+        height: 24rem;
+    }
+
     .service-card img {
         transition: transform 0.3s ease;
         border-radius: inherit;
+    }
+    
+    .service-card iframe {
+        border-radius: inherit;
+        transition: transform 0.3s ease;
     }
 
     .service-card-overlay {
@@ -66,10 +79,59 @@
     .afla-mai-multe:hover {
         background-color: #1E40AF;
     }
+
+    .services-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .services-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+    }
+
+    .services-grid .service-card {
+        flex: 1 1 calc(33.333% - 40px);
+    }
+
+    @media (max-width: 1000px) {
+        .services-grid .service-card {
+            flex: 1 1 calc(50% - 40px);
+        }
+    }
+
+    @media (max-width: 700px) {
+        .services-grid .service-card {
+            flex: 1 1 100%;
+        }
+    }
+
+    .map-container {
+        position: relative;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .map {
+        width: 100%;
+        height: 288px;
+        border: 0;
+        filter: brightness(80%) contrast(110%);
+    }
+
+    .map-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+    }
 </style>
 
 <!-- Hero Section -->
-<div class="relative bg-cover bg-center h-96" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/banner.jpg');">
+<div class="hero-section">
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="absolute inset-0 flex items-center justify-center">
         <div class="text-center text-white">
@@ -84,65 +146,84 @@
 
 <!-- Services Section -->
 <section class="w-full px-6 py-10">
-    <!-- Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Service 1: Grafice de calatorie / Turism -->
-        <div class="relative mb-6 service-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/grafice.jpg" alt="Trasee si Grafice" class="w-full h-72 object-cover rounded-md">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 rounded-md service-card-overlay">
-                <h4 class="text-2xl font-bold mb-4">Grafice de calatorie / Turism</h4>
-                <p class="text-base mb-6">
-                    Informeaza-te cu ultimile modificari ale programelor si rutelor efectuate de masinile noastre. Vizualizeaza aceasta sectiune pentru a cunoaste oricare deviatie sau schimbare de rute.
-                </p>
-                <a href="<?php echo get_permalink(get_page_by_title('Curse')); ?>" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+    <div class="services-container">
+        <div class="services-grid">
+            <!-- Service 1: Grafice de calatorie / Turism -->
+            <div class="service-card">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/grafice.jpg" alt="Trasee si Grafice" class="w-full h-72 object-cover rounded-md">
+                <div class="service-card-overlay">
+                    <h4 class="text-2xl font-bold mb-4">Grafice de calatorie / Turism</h4>
+                    <p class="text-base mb-6">
+                        Informeaza-te cu ultimile modificari ale programelor si rutelor efectuate de masinile noastre. Vizualizeaza aceasta sectiune pentru a cunoaste oricare deviatie sau schimbare de rute.
+                    </p>
+                    <a href="<?php echo get_permalink(get_page_by_title('Curse')); ?>" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Service 2: Inchiriere Autocare -->
-        <div class="relative mb-6 service-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/inchiriere-autocar.jpg" alt="Inchiriere Autocare" class="w-full h-72 object-cover rounded-md">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 rounded-md service-card-overlay">
-                <h4 class="text-2xl font-bold mb-4">Inchiriere Autocare</h4>
-                <p class="text-base mb-6">
-                    Te ajutam sa iti creezi traseele tale personalizate. Suntem langa tine oriunde, oricand pentru siguranta totala. Foarte multe solutii si servicii te asteapta, completate bineinteles de confort.
-                </p>
-                <a href="https://www.transfero.ro/inchiriere-autocare/" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+            <!-- Service 2: Inchiriere Autocare -->
+            <div class="service-card">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/inchiriere-autocar.jpg" alt="Inchiriere Autocare" class="w-full h-72 object-cover rounded-md">
+                <div class="service-card-overlay">
+                    <h4 class="text-2xl font-bold mb-4">Inchiriere Autocare</h4>
+                    <p class="text-base mb-6">
+                        Te ajutam sa iti creezi traseele tale personalizate. Suntem langa tine oriunde, oricand pentru siguranta totala. Foarte multe solutii si servicii te asteapta, completate bineinteles de confort.
+                    </p>
+                    <a href="https://www.transfero.ro/inchiriere-autocare/" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Service 3: Transfer Aeroport -->
-        <div class="relative mb-6 service-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/trs2.jpg" alt="Transfer Aeroport" class="w-full h-72 object-cover rounded-md">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 rounded-md service-card-overlay">
-                <h4 class="text-2xl font-bold mb-4">Transfer Aeroport</h4>
-                <p class="text-base mb-6">
-                    Conexiune rapida cu Aeroportul International Henri Coanda – Otopeni. Rezerva-ti locurile sau vizualizeaza tarifele.
-                </p>
-                <a href="http://transfero.ro" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+            <!-- Service 3: Transfer Aeroport -->
+            <div class="service-card">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/trs3.jpg" alt="Transfer Aeroport" class="w-full h-72 object-cover rounded-md">
+                <div class="service-card-overlay">
+                    <h4 class="text-2xl font-bold mb-4">Transfer Aeroport</h4>
+                    <p class="text-base mb-6">
+                        Conexiune rapida cu Aeroportul International Henri Coanda – Otopeni. Rezerva-ti locurile sau vizualizeaza tarifele.
+                    </p>
+                    <a href="http://transfero.ro" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Service 4: Inchirieri Auto -->
-        <div class="relative mb-6 service-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/rent2.jpg" alt="Inchirieri Auto" class="w-full h-72 object-cover rounded-md">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 rounded-md service-card-overlay">
-                <h4 class="text-2xl font-bold mb-4">Inchirieri Auto</h4>
-                <p class="text-base mb-6">
-                    Gegi este unul dintre principalii furnizori de servicii de inchirieri auto in Tecuci, Focsani si Barlad, oferind o gama larga de optiuni pentru clientii care au nevoie de un vehicul in diverse ocazii.
-                </p>
-                <a href="https://www.transfero.ro/rent-a-car-inchirieri-auto/" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+            <!-- Service 4: Inchirieri Auto -->
+            <div class="service-card">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/rent2.jpg" alt="Inchirieri Auto" class="w-full h-72 object-cover rounded-md">
+                <div class="service-card-overlay">
+                    <h4 class="text-2xl font-bold mb-4">Inchirieri Auto</h4>
+                    <p class="text-base mb-6">
+                        Gegi este unul dintre principalii furnizori de servicii de inchirieri auto in Tecuci, Focsani si Barlad, oferind o gama larga de optiuni pentru clientii care au nevoie de un vehicul in diverse ocazii.
+                    </p>
+                    <a href="https://www.transfero.ro/rent-a-car-inchirieri-auto/" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Service 5: Cazare -->
-        <div class="relative mb-6 service-card">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/cazare.jpg" alt="Cazare" class="w-full h-72 object-cover rounded-md">
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 rounded-md service-card-overlay">
-                <h4 class="text-2xl font-bold mb-4">Cazare</h4>
-                <p class="text-base mb-6">
-                    ???
-                </p>
-                <a href="#" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+            <!-- Service 5: Locatie -->
+            <div class="service-card map-container">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2779.543555375312!2d27.430955730552878!3d45.840419774185534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b428549b2b8cd9%3A0xc61a90f26a75c4b9!2sAutogara%20GEGI!5e0!3m2!1sro!2sro!4v1721727454376!5m2!1sro!2sro" 
+                    width="100%" 
+                    height="200" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="service-card-overlay">
+                    <h4 class="text-2xl font-bold mb-4">Locatie</h4>
+                    <p class="text-base mb-6">
+                        Vizualizeaza locatia noastra pe Google Maps.
+                    </p>
+                    <a href="https://www.google.com/maps/place/Autogara+GEGI/@45.8404198,27.4309557,17z/data=!4m6!3m5!1s0x40b428549b2b8cd9:0xc61a90f26a75c4b9!8m2!3d45.8404198!4d27.4309557!16s%2Fg%2F11b6v4f98x" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+                </div>
+            </div>
+
+            <!-- Service 6: Cazare -->
+            <div class="service-card">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/cazare.jpg" alt="Cazare" class="w-full h-72 object-cover rounded-md">
+                <div class="service-card-overlay">
+                    <h4 class="text-2xl font-bold mb-4">Cazare</h4>
+                    <p class="text-base mb-6">
+                        Descopera optiunile noastre de cazare confortabile si accesibile, adaptate nevoilor tale.
+                    </p>
+                    <a href="#" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+                </div>
             </div>
         </div>
     </div>
