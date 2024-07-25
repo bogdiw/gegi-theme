@@ -35,9 +35,9 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Overlay semi-transparent */
-      z-index: -1; /* Așează overlay-ul sub conținutul footer-ului */
-      display: none; /* Ascunde overlay-ul pe ecranele mari */
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+      display: none;
     }
 
     .footerclass {
@@ -54,18 +54,20 @@
     .footercol2,
     .footercol3,
     .footercol4 {
-      padding: 10px; /* Reducere padding */
+      padding: 10px;
       flex: 1;
+      text-shadow: 1px 1px 2px black;
     }
 
     .footercredits a {
       color: #FFFF00;
+      text-shadow: 1px 1px 2px black;
     }
 
     /* Media Queries for Mobile Devices */
     @media (max-width: 768px) {
       .footer-overlay {
-        display: block; /* Afișează overlay-ul pe ecranele mici */
+        display: block;
       }
 
       .grid {
@@ -97,7 +99,7 @@
       }
       
       .footercol4 {
-        order: 4; /* În mod normal, coloana 4 va fi ultima */
+        order: 4;
       }
 
       /* Specific pentru mutarea coloanei 4 sub coloana 1 */
@@ -122,7 +124,6 @@
       }
     }
 
-    /* Ajustare padding pentru a muta textele mai sus */
     .footercol1 .textwidget,
     .footercol2 .textwidget,
     .footercol3 .textwidget,
@@ -130,9 +131,13 @@
       padding-top: 0;
     }
 
-    /* Adaugare margin pentru footer credits */
     .footercredits {
-      margin-top: 120px; /* Ajustare margin */
+      margin-top: 120px;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    .footerclass p, .footerclass a {
+      text-shadow: 1px 1px 2px black;
     }
   </style>
 </head>
@@ -147,10 +152,9 @@
       Your browser does not support the video tag.
     </video>
     
-    <!-- Overlay pentru a îmbunătăți lizibilitatea textului -->
     <div class="footer-overlay"></div>
     
-    <div class="container mx-auto py-6"> <!-- Reducere padding -->
+    <div class="container mx-auto py-6">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
         <!-- Column 1 -->
@@ -160,8 +164,8 @@
               <div class="textwidget">
                 RO 805300 Tecuci<br>
                 Transilvaniei, 7<br>
-                <a href="tel:+40752105000">Tel: +4 0752 105 000</a><br>
-                <a href="mailto:transport@gegi.ro">E-mail: transport@gegi.ro</a>
+                <a style="color: #FFFFFF" href="tel:+40752105000">Tel: +4 0752 105 000</a><br>
+                <a style="color: #FFFFFF" href="mailto:transport@gegi.ro">E-mail: transport@gegi.ro</a>
               </div>
             </aside>
           </div>
