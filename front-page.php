@@ -222,7 +222,7 @@
                     <p class="text-base mb-6">
                         Descopera optiunile noastre de cazare confortabile si accesibile, adaptate nevoilor tale.
                     </p>
-                    <a href="#" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+                    <a href="https://www.facebook.com/hotelkristalltecuci/?locale=ro_RO" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
                 </div>
             </div>
         </div>
