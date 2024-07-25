@@ -65,7 +65,7 @@
     }
 
     /* Media Queries for Mobile Devices */
-    @media (max-width: 768px) {
+    @media (max-width: 913px) {
       .footer-overlay {
         display: block;
       }
