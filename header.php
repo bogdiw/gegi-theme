@@ -186,11 +186,7 @@
                                         </a>
                                     </li>
                                     <li>
-<<<<<<< HEAD
                                         <a href="https://www.facebook.com/hotelkristalltecuci/?locale=ro_RO" style="color: #000000" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">
-=======
-                                        <a href="#" style="color: #000000" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">
->>>>>>> 959705bfbb0c5c8f59b229a31144231a319ad3aa
                                             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" class="size-6"><path d="M2,14H24v8H22V19H2v3H0V2H2Zm3.5-2A2.5,2.5,0,1,0,3,9.5,2.5,2.5,0,0,0,5.5,12ZM21,6H12A3,3,0,0,0,9,9v3H24V9A3,3,0,0,0,21,6Z"/></svg>
                                             <span class="ml-2">CAZARE</span>
                                         </a>
