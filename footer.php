@@ -164,8 +164,8 @@
               <div class="textwidget">
                 RO 805300 Tecuci<br>
                 Transilvaniei, 7<br>
-                <a style="color: #FFFFFF" href="tel:+40752105000">Tel: +4 0752 105 000</a><br>
-                <a style="color: #FFFFFF" href="mailto:transport@gegi.ro">E-mail: transport@gegi.ro</a>
+                <a style="color: #FFFFFF" href="tel:0236 820 031">Tel: 0236 820 031</a><br>
+                <a style="color: #FFFFFF" href="mailto:autogara@gegi.ro">E-mail: autogara@gegi.ro</a>
               </div>
             </aside>
           </div>
