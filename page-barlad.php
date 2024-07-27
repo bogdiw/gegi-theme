@@ -127,7 +127,7 @@
     <div class="col-sm-12 text-center">
         <div class="section-title">
             <h1 class="title-page font-bold"><?php echo get_the_title() ?></h1>
-            <h2 class="subtitle"><?php the_field('subtitle') ?></h2>
+            <a href="tel:+40746958888" class="subtitle">Telefon: +40 746 958 888</a>
         </div>
     </div>
 
