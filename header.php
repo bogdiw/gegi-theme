@@ -115,7 +115,7 @@
                             <div x-cloak x-show="dropdownOpen" class="lg:absolute bg-white rounded-md p-2" x-transition @click.away="dropdownOpen = false">
                                 <ul class="space-y-2 lg:w-48">
                                     <li>
-                                        <a href="<?php echo get_permalink(get_page_by_title('Curse')); ?>" style="color: #000000" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">
+                                        <a href="<?php echo get_permalink(get_page_by_title('Tecuci')); ?>" style="color: #000000" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">
                                         <svg fill="#000000" height="800px" width="800px" version="1.1" id="Filled_Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                             y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" class="size-6">
                                         <g id="Location-Pin-Filled">
@@ -127,7 +127,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo get_permalink(get_page_by_title('Curse')); ?>" style="color: #000000" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">
+                                        <a href="<?php echo get_permalink(get_page_by_title('Barlad')); ?>" style="color: #000000" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">
                                         <svg fill="#000000" height="800px" width="800px" version="1.1" id="Filled_Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                             y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" class="size-6">
                                         <g id="Location-Pin-Filled">
@@ -139,7 +139,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href=""<?php echo get_permalink(get_page_by_title('Curse')); ?>" style="color: #000000" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">
+                                        <a href="<?php echo get_permalink(get_page_by_title('Galati')); ?>" style="color: #000000" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">
                                         <svg fill="#000000" height="800px" width="800px" version="1.1" id="Filled_Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                             y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" class="size-6">
                                         <g id="Location-Pin-Filled">

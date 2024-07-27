@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Curse */
+/* Template Name: Tecuci */
 ?>
 <?php get_header(); ?>
 
@@ -140,38 +140,39 @@
                     'order'          => 'ASC',
                     'orderby'        => 'title',
                     'meta_query'     => array(
+                        'relation' => 'OR',
                         array(
-                            'meta_key' => '_wp_page_template',
-                            'value'    => 'page-cursa.php',
+                            'key'     => 'statie_plecare',
+                            'value'   => 'Tecuci',
+                            'compare' => 'LIKE',
+                        ),
+                        array(
+                            'key'     => 'statie_sosire',
+                            'value'   => 'Tecuci',
+                            'compare' => 'LIKE',
                         )
                     )
                 );
                 $parent = new WP_Query( $args );
                 if ( $parent->have_posts() ) : ?>
-                    <?php $first = 'A'; ?>
-                    <div class="col-cursa"><span><?php echo $first ?></span>
-                        <?php while ( $parent->have_posts() ) : $parent->the_post();
-                            $currentletter = substr( get_the_title(), 0, 1 ); ?>
-
-                            <?php if ( $first == $currentletter ): ?>
-                                <div class="item-cursa">
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-                                    <a class="btn" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php _e('detalii')?></a>
-                                </div>
-
-                            <?php else: $first = $currentletter; ?>
-                    </div><div class="col-cursa"><span><?php echo $first ?></span>
+                    <?php 
+                    $first = '';
+                    while ( $parent->have_posts() ) : $parent->the_post();
+                        $currentletter = substr( get_the_title(), 0, 1 );
+                        if ( $first != $currentletter ):
+                            if ($first != '') echo '</div>'; // Close previous column div if not the first letter
+                            $first = $currentletter; 
+                            echo '<div class="col-cursa"><span>' . $first . '</span>';
+                        endif;
+                    ?>
                         <div class="item-cursa">
                             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
                             <a class="btn" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php _e('detalii')?></a>
                         </div>
-                <?php endif; ?>
-
-                <?php endwhile; ?>
-                </div>
-
-            <?php endif;
-            wp_reset_query(); ?>
+                    <?php endwhile; ?>
+                    </div> <!-- Close the last column div -->
+                <?php endif;
+                wp_reset_query(); ?>
             </div>
         </div>
     </div>
