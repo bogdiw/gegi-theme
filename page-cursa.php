@@ -185,8 +185,8 @@
             <h1 class="title"><?php _e('Transfer aeroport')?>&nbsp;<?php echo get_the_title()?></h1>
             <div class="info-btn">
                 <div class="info-cursa">
-                    <h2><?php _e('Plecare')?>: <?php echo get_field('statie_plecare')?> </h2>
-                    <h2><?php _e('Sosire')?>: <?php echo get_field('statie_sosire')?></h2>
+                    <h2><?php _e('Plecare')?>: <?php echo get_field('statie_1')?> </h2>
+                    <h2><?php _e('Sosire')?>: <?php echo get_field('statie_2')?></h2>
                     <div><strong><?php _e('Durata')?>:</strong> <span><?php the_field('durata_calatoriei')?></span></div>
                 </div>
 

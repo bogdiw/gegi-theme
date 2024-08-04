@@ -111,7 +111,7 @@
 
 <!-- Hero Section -->
 <div class="relative h-96">
-    <div class="bg-cover bg-center absolute inset-0" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/curse.jpg'); filter: brightness(1.3);"></div>
+    <div class="bg-cover bg-center absolute inset-0" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/grafice4.jpg'); filter: brightness(1.0);"></div>
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="absolute inset-0 flex items-center justify-center">
         <div class="text-center text-white">
@@ -148,30 +148,24 @@
                 );
                 $parent = new WP_Query( $args );
                 if ( $parent->have_posts() ) : ?>
-                    <?php $first = 'A'; ?>
-                    <div class="col-cursa"><span><?php echo $first ?></span>
-                        <?php while ( $parent->have_posts() ) : $parent->the_post();
-                            $currentletter = substr( get_the_title(), 0, 1 ); ?>
-
-                            <?php if ( $first == $currentletter ): ?>
-                                <div class="item-cursa">
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-                                    <a class="btn" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php _e('detalii')?></a>
-                                </div>
-
-                            <?php else: $first = $currentletter; ?>
-                    </div><div class="col-cursa"><span><?php echo $first ?></span>
+                    <?php 
+                    $first = '';
+                    while ( $parent->have_posts() ) : $parent->the_post();
+                        $currentletter = substr( get_the_title(), 0, 1 );
+                        if ( $first != $currentletter ):
+                            if ($first != '') echo '</div>'; // Close previous column div if not the first letter
+                            $first = $currentletter; 
+                            echo '<div class="col-cursa"><span>' . $first . '</span>';
+                        endif;
+                    ?>
                         <div class="item-cursa">
                             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
                             <a class="btn" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php _e('detalii')?></a>
                         </div>
-                <?php endif; ?>
-
-                <?php endwhile; ?>
-                </div>
-
-            <?php endif;
-            wp_reset_query(); ?>
+                    <?php endwhile; ?>
+                    </div> <!-- Close the last column div -->
+                <?php endif;
+                wp_reset_query(); ?>
             </div>
         </div>
     </div>
