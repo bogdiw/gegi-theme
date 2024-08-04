@@ -138,7 +138,7 @@
             <h1 class="text-6xl font-semibold">Online e mai simplu!</h1>
             <p class="font-light text-3xl mt-5">Servicii de transport national.</p>
             <div class="flex justify-center mt-10">
-                <a href="<?php echo get_permalink(get_page_by_title('Curse')); ?>" style="color: #FFFFFF" class="flex items-center px-4 py-2 font-medium text-white bg-blue-900 rounded-md hover:bg-blue-800">CAUTA RUTE</a>
+                <a href="<?php echo get_permalink(get_page_by_title('Grafice')); ?>" style="color: #FFFFFF" class="flex items-center px-4 py-2 font-medium text-white bg-blue-900 rounded-md hover:bg-blue-800">CAUTA RUTE</a>
             </div>
         </div>
     </div>
@@ -156,7 +156,7 @@
                     <p class="text-base mb-6">
                         Informeaza-te cu ultimile modificari ale programelor si rutelor efectuate de masinile noastre. Vizualizeaza aceasta sectiune pentru a cunoaste oricare deviatie sau schimbare de rute.
                     </p>
-                    <a href="<?php echo get_permalink(get_page_by_title('Curse')); ?>" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
+                    <a href="<?php echo get_permalink(get_page_by_title('Grafice')); ?>" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
                 </div>
             </div>
 

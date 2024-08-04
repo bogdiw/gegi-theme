@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Galati */
+/* Template Name: Grafice */
 ?>
 <?php get_header(); ?>
 
@@ -127,7 +127,7 @@
     <div class="col-sm-12 text-center">
         <div class="section-title">
             <h1 class="title-page font-bold"><?php echo get_the_title() ?></h1>
-            <a href="tel:+40729288544" class="subtitle">Telefon: +40 729 288 544    </a>
+            <h2 class="subtitle"><?php the_field('subtitle') ?></h2>
         </div>
     </div>
 
@@ -140,39 +140,38 @@
                     'order'          => 'ASC',
                     'orderby'        => 'title',
                     'meta_query'     => array(
-                        'relation' => 'OR',
                         array(
-                            'key'     => 'statie_plecare',
-                            'value'   => 'Galati',
-                            'compare' => 'LIKE',
-                        ),
-                        array(
-                            'key'     => 'statie_sosire',
-                            'value'   => 'Galati',
-                            'compare' => 'LIKE',
+                            'meta_key' => '_wp_page_template',
+                            'value'    => 'page-cursa.php',
                         )
                     )
                 );
                 $parent = new WP_Query( $args );
                 if ( $parent->have_posts() ) : ?>
-                    <?php 
-                    $first = '';
-                    while ( $parent->have_posts() ) : $parent->the_post();
-                        $currentletter = substr( get_the_title(), 0, 1 );
-                        if ( $first != $currentletter ):
-                            if ($first != '') echo '</div>'; // Close previous column div if not the first letter
-                            $first = $currentletter; 
-                            echo '<div class="col-cursa"><span>' . $first . '</span>';
-                        endif;
-                    ?>
+                    <?php $first = 'A'; ?>
+                    <div class="col-cursa"><span><?php echo $first ?></span>
+                        <?php while ( $parent->have_posts() ) : $parent->the_post();
+                            $currentletter = substr( get_the_title(), 0, 1 ); ?>
+
+                            <?php if ( $first == $currentletter ): ?>
+                                <div class="item-cursa">
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                                    <a class="btn" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php _e('detalii')?></a>
+                                </div>
+
+                            <?php else: $first = $currentletter; ?>
+                    </div><div class="col-cursa"><span><?php echo $first ?></span>
                         <div class="item-cursa">
                             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
                             <a class="btn" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php _e('detalii')?></a>
                         </div>
-                    <?php endwhile; ?>
-                    </div> <!-- Close the last column div -->
-                <?php endif;
-                wp_reset_query(); ?>
+                <?php endif; ?>
+
+                <?php endwhile; ?>
+                </div>
+
+            <?php endif;
+            wp_reset_query(); ?>
             </div>
         </div>
     </div>

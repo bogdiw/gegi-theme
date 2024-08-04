@@ -100,61 +100,14 @@
                                 <span class="ml-2">ACASA</span>
                             </a>
                         </li>
-                        <!-- Dropdown -->
-                        <li class="relative" x-data="{ dropdownOpen: false }">
-                            <button href="#" class="servicii-button flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-red-800" @click="dropdownOpen = !dropdownOpen">
+                        <li>
+                            <a href="<?php echo get_permalink(get_page_by_title('Grafice')); ?>" style="color: #FFFFFF" class="flex px-4 py-2 font-medium text-white rounded-md hover:bg-red-800">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
                                 </svg>
                                 <span class="ml-2">GRAFICE DE CIRCULATIE</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 ml-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </button>
-                            <!-- Dropdown Menu -->
-                            <div x-cloak x-show="dropdownOpen" class="lg:absolute bg-white rounded-md p-2" x-transition @click.away="dropdownOpen = false">
-                                <ul class="space-y-2 lg:w-48">
-                                    <li>
-                                        <a href="<?php echo get_permalink(get_page_by_title('Tecuci')); ?>" style="color: #000000" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">
-                                        <svg fill="#000000" height="800px" width="800px" version="1.1" id="Filled_Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                            y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" class="size-6">
-                                        <g id="Location-Pin-Filled">
-                                            <path d="M12,1c-4.97,0-9,4.03-9,9c0,6.75,9,13,9,13s9-6.25,9-13C21,5.03,16.97,1,12,1z M12,13c-1.66,0-3-1.34-3-3s1.34-3,3-3
-                                                s3,1.34,3,3S13.66,13,12,13z"/>
-                                        </g>
-                                        </svg>
-                                            <span class="ml-2">TECUCI</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo get_permalink(get_page_by_title('Barlad')); ?>" style="color: #000000" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">
-                                        <svg fill="#000000" height="800px" width="800px" version="1.1" id="Filled_Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                            y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" class="size-6">
-                                        <g id="Location-Pin-Filled">
-                                            <path d="M12,1c-4.97,0-9,4.03-9,9c0,6.75,9,13,9,13s9-6.25,9-13C21,5.03,16.97,1,12,1z M12,13c-1.66,0-3-1.34-3-3s1.34-3,3-3
-                                                s3,1.34,3,3S13.66,13,12,13z"/>
-                                        </g>
-                                        </svg>
-                                            <span class="ml-2">BARLAD</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo get_permalink(get_page_by_title('Galati')); ?>" style="color: #000000" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">
-                                        <svg fill="#000000" height="800px" width="800px" version="1.1" id="Filled_Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                            y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" class="size-6">
-                                        <g id="Location-Pin-Filled">
-                                            <path d="M12,1c-4.97,0-9,4.03-9,9c0,6.75,9,13,9,13s9-6.25,9-13C21,5.03,16.97,1,12,1z M12,13c-1.66,0-3-1.34-3-3s1.34-3,3-3
-                                                s3,1.34,3,3S13.66,13,12,13z"/>
-                                        </g>
-                                        </svg>
-                                            <span class="ml-2">GALATI</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            </a>
                         </li>
-                        <!-- Dropdown -->
-
                         <!-- Dropdown -->
                         <li class="relative" x-data="{ dropdownOpen: false }">
                             <button href="#" class="servicii-button flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-red-800" @click="dropdownOpen = !dropdownOpen">
