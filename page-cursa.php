@@ -67,6 +67,7 @@
     .departure-item {
         display: flex;
         align-items: center;
+        justify-content: center; /* Center content horizontally */
         margin-bottom: 20px;
         padding: 15px;
         background-color: #fff;
@@ -74,6 +75,7 @@
         border: 1px solid #d3d3d3;
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center; /* Center text inside */
     }
 
     .departure-item:hover {
@@ -87,8 +89,8 @@
     }
 
     .departure-time {
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 20px; /* Increase the font size */
+        font-weight: 700; /* Make the text bolder */
     }
 
     .departure-station {
@@ -155,7 +157,7 @@
     <div class="legend-container">
         <h3>Legenda:</h3>
         <p><strong>* NU circula Sambata, Duminica si in sarbatorile legale</strong></p>
-        <p><strong>^ Circula doar în perioada cursurilor scolare</strong></p>
+        <p><strong>^ Circula doar in perioada cursurilor scolare</strong></p>
     </div>
         <div class="departure-columns">
             <div class="departure-column">
@@ -163,10 +165,8 @@
                 <?php if (have_rows('ore_plecare_1')): ?>
                     <?php while (have_rows('ore_plecare_1')): the_row(); ?>
                         <div class="departure-item">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo-gegi-bg.png" alt="Company Logo" />
                             <div>
                                 <div class="departure-time"><?php echo get_sub_field('ora_plecare_1'); ?></div>
-                                <div class="departure-station"><?php echo get_field('statie_1'); ?> - <?php echo get_field('statie_2'); ?></div>
                             </div>
                         </div>
                     <?php endwhile; ?>
@@ -178,10 +178,8 @@
                 <?php if (have_rows('ore_plecare_2')): ?>
                     <?php while (have_rows('ore_plecare_2')): the_row(); ?>
                         <div class="departure-item">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo-gegi-bg.png" alt="Company Logo" />
                             <div>
                                 <div class="departure-time"><?php echo get_sub_field('ora_plecare_2'); ?></div>
-                                <div class="departure-station"><?php echo get_field('statie_2'); ?> - <?php echo get_field('statie_1'); ?></div>
                             </div>
                         </div>
                     <?php endwhile; ?>

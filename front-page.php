@@ -136,7 +136,7 @@
     <div class="absolute inset-0 flex items-center justify-center">
         <div class="text-center text-white">
             <h1 class="text-6xl font-semibold">Online e mai simplu!</h1>
-            <p class="font-light text-3xl mt-5">Servicii de transport national.</p>
+            <p class="font-light text-3xl mt-5">Servicii de transport.</p>
             <div class="flex justify-center mt-10">
                 <a href="<?php echo get_permalink(get_page_by_title('Grafice')); ?>" style="color: #FFFFFF" class="flex items-center px-4 py-2 font-medium text-white bg-blue-900 rounded-md hover:bg-blue-800">CAUTA RUTE</a>
             </div>

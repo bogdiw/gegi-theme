@@ -115,8 +115,7 @@
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="absolute inset-0 flex items-center justify-center">
         <div class="text-center text-white">
-            <h1 class="text-4xl lg:text-6xl font-semibold"><?php _e('De acasa la aeroport si retur.') ?></h1>
-            <p class="font-light text-lg lg:text-3xl mt-5"><?php _e('Servicii de transport si transfer aeroport.') ?></p>
+            <h1 class="text-4xl lg:text-6xl font-semibold"><?php echo get_the_title() ?></h1>
         </div>
     </div>
 </div>
@@ -126,7 +125,6 @@
     <div class="row">
     <div class="col-sm-12 text-center">
         <div class="section-title">
-            <h1 class="title-page font-bold"><?php echo get_the_title() ?></h1>
             <h2 class="subtitle"><?php the_field('subtitle') ?></h2>
         </div>
     </div>
