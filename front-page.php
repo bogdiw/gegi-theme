@@ -135,8 +135,7 @@
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="absolute inset-0 flex items-center justify-center">
         <div class="text-center text-white">
-            <h1 class="text-6xl font-semibold">Online e mai simplu!</h1>
-            <p class="font-light text-3xl mt-5">Servicii de transport.</p>
+            <h1 class="text-6xl font-semibold">Servicii de transport.</h1>
             <div class="flex justify-center mt-10">
                 <a href="<?php echo get_permalink(get_page_by_title('Grafice')); ?>" style="color: #FFFFFF" class="flex items-center px-4 py-2 font-medium text-white bg-blue-900 rounded-md hover:bg-blue-800">CAUTA RUTE</a>
             </div>
@@ -148,13 +147,13 @@
 <section class="w-full px-6 py-10">
     <div class="services-container">
         <div class="services-grid">
-            <!-- Service 1: Grafice de calatorie / Turism -->
+            <!-- Service 1: Grafice Circulatie -->
             <div class="service-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/grafice.jpg" alt="Trasee si Grafice" class="w-full h-72 object-cover rounded-md">
                 <div class="service-card-overlay">
-                    <h4 class="text-2xl font-bold mb-4">Grafice de calatorie / Turism</h4>
+                    <h4 class="text-2xl font-bold mb-4">Grafice Circulatie</h4>
                     <p class="text-base mb-6">
-                        Informeaza-te cu ultimile modificari ale programelor si rutelor efectuate de masinile noastre. Vizualizeaza aceasta sectiune pentru a cunoaste oricare deviatie sau schimbare de rute.
+                        Informeaza-te in legatura cu programul curselor.
                     </p>
                     <a href="<?php echo get_permalink(get_page_by_title('Grafice')); ?>" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
                 </div>
@@ -166,7 +165,7 @@
                 <div class="service-card-overlay">
                     <h4 class="text-2xl font-bold mb-4">Inchiriere Autocare</h4>
                     <p class="text-base mb-6">
-                        Te ajutam sa iti creezi traseele tale personalizate. Suntem langa tine oriunde, oricand pentru siguranta totala. Foarte multe solutii si servicii te asteapta, completate bineinteles de confort.
+                        Oferim solutii de transport personalizate in functie de nevoile tale.
                     </p>
                     <a href="https://www.transfero.ro/inchiriere-autocare/" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
                 </div>
@@ -178,7 +177,7 @@
                 <div class="service-card-overlay">
                     <h4 class="text-2xl font-bold mb-4">Transfer Aeroport</h4>
                     <p class="text-base mb-6">
-                        Conexiune rapida cu Aeroportul International Henri Coanda – Otopeni. Rezerva-ti locurile sau vizualizeaza tarifele.
+                        Conexiune rapida cu Aeroportul International Henri Coanda – Otopeni.
                     </p>
                     <a href="http://transfero.ro" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
                 </div>
@@ -190,7 +189,7 @@
                 <div class="service-card-overlay">
                     <h4 class="text-2xl font-bold mb-4">Inchirieri Auto</h4>
                     <p class="text-base mb-6">
-                        Gegi este unul dintre principalii furnizori de servicii de inchirieri auto in Tecuci, Focsani si Barlad, oferind o gama larga de optiuni pentru clientii care au nevoie de un vehicul in diverse ocazii.
+                        Inchiriaza masina la orice ora din zi sau din noapte, la preturi avantajoase.
                     </p>
                     <a href="https://www.transfero.ro/rent-a-car-inchirieri-auto/" style="color: #FFFFFF" class="afla-mai-multe">Afla mai multe</a>
                 </div>
