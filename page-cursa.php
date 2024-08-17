@@ -8,7 +8,7 @@
     #course-info {
         font-family: Arial, sans-serif;
         margin: 20px;
-        margin-top: 100px; /* Adjust this value based on your header height */
+        margin-top: 100px;
     }
 
     .departure-header {
@@ -67,7 +67,7 @@
     .departure-item {
         display: flex;
         align-items: center;
-        justify-content: center; /* Center content horizontally */
+        justify-content: center;
         margin-bottom: 20px;
         padding: 15px;
         background-color: #fff;
@@ -75,7 +75,7 @@
         border: 1px solid #d3d3d3;
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: center; /* Center text inside */
+        text-align: center;
     }
 
     .departure-item:hover {
@@ -89,8 +89,8 @@
     }
 
     .departure-time {
-        font-size: 20px; /* Increase the font size */
-        font-weight: 700; /* Make the text bolder */
+        font-size: 20px;
+        font-weight: 700;
     }
 
     .departure-station {
