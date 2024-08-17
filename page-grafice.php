@@ -115,20 +115,13 @@
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="absolute inset-0 flex items-center justify-center">
         <div class="text-center text-white">
-            <h1 class="text-4xl lg:text-6xl font-semibold"><?php echo get_the_title() ?></h1>
+            <h1 class="text-4xl lg:text-6xl font-semibold"><?php echo get_the_title() ?>.</h1>
         </div>
     </div>
 </div>
 
 <!-- Main Content -->
 <div class="curse-container">
-    <div class="row">
-    <div class="col-sm-12 text-center">
-        <div class="section-title">
-            <h2 class="subtitle"><?php the_field('subtitle') ?></h2>
-        </div>
-    </div>
-
     <div class="col-sm-12">
             <div class="lista-curse">
                 <?php
@@ -151,7 +144,7 @@
                     while ( $parent->have_posts() ) : $parent->the_post();
                         $currentletter = substr( get_the_title(), 0, 1 );
                         if ( $first != $currentletter ):
-                            if ($first != '') echo '</div>'; // Close previous column div if not the first letter
+                            if ($first != '') echo '</div>';
                             $first = $currentletter; 
                             echo '<div class="col-cursa"><span>' . $first . '</span>';
                         endif;
@@ -161,7 +154,7 @@
                             <a class="btn" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php _e('detalii')?></a>
                         </div>
                     <?php endwhile; ?>
-                    </div> <!-- Close the last column div -->
+                    </div>
                 <?php endif;
                 wp_reset_query(); ?>
             </div>

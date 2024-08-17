@@ -10,51 +10,30 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<style>
+	h1 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 3rem;
+	line-height: 1.2;
+	text-align: center;
+	background: -webkit-linear-gradient(left, #4A90E2, #F5A623);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	}
+</style>
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'gegi' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'gegi' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'gegi' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$gegi_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'gegi' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$gegi_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
+<div class="min-h-screen flex items-center justify-center text-center">
+  <div class="relative z-10 flex flex-col items-center justify-center p-6 bg-white rounded-lg">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/notfound.png" alt="404" class="w-32 h-32 mb-5"/>
+    <h1 class="text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-rose-500 font-oswald mb-10">
+      404 - Pagina cautata nu exista.
+    </h1>
+    <a class="text-base text-white px-8 py-2.5 transition-transform duration-500 bg-gradient-to-r from-indigo-500 to-rose-500 rounded-xl" style="color: #FFFFFF" href="<?php echo home_url(); ?>">
+      Inapoi Acasa
+    </a>
+  </div>
+</div>
 
 <?php
 get_footer();
+?>

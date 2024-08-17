@@ -10,7 +10,7 @@
             </h1>
             <div class="h-0.5 bg-red-500 w-14 mx-auto"></div>
             <p class="text-gray-600 text-base leading-6">
-                Pentru mai multe detalii despre serviciile Gegi sau eventuale reclamatii, folositi informatiile de mai jos:
+                Pentru mai multe detalii despre serviciile Gegi sau eventuale reclamatii, folositi informatiile si formularul de mai jos:
             </p>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-16">
