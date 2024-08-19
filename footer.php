@@ -11,22 +11,22 @@
       padding: 0;
     }
 
-    /* Stilizare pentru videoclipul din footer */
-    #footer-video {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 70%;
-      z-index: -2;
-    }
-
     #containerfooter {
       position: relative;
       width: 100%;
+      height: 400px; /* Setează o înălțime fixă dacă este necesar */
       z-index: 1;
+    }
+
+    #footer-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Asigură că imaginea acoperă întreaga zonă fără distorsiuni */
+      object-position: center 65%; /* Așază imaginea în centrul de jos al containerului */
+      z-index: -2;
     }
 
     .footer-overlay {
@@ -41,7 +41,7 @@
     }
 
     .footerclass {
-      color: #ffffff;
+      color: #000000; /* Schimbă culoarea textului în negru */
       padding: 1rem;
       position: relative;
       z-index: 2;
@@ -55,16 +55,38 @@
     .footercol3,
     .footercol4 {
       padding: 10px;
-      flex: 1;
-      text-shadow: 1px 1px 2px black;
+      text-shadow: 1px 1px 2px white; /* Adaugă o umbră albă textului din coloane */
+      color: #000000; /* Asigură că textul din coloane este negru */
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .footercol1, .footercol4 {
+      flex-basis: 20%;
+      padding-top: 20px; /* Ajustează această valoare după cum este necesar */
+    }
+
+    .footercol2, .footercol3 {
+      flex-basis: 30%;
     }
 
     .footercredits a {
-      color: #FFFF00;
-      text-shadow: 1px 1px 2px black;
+      color: #FFFF00; /* Schimbă culoarea link-ului „Frățiman Bogdan-Gabriel” în galben */
+      text-shadow: 1px 1px 2px white; /* Adaugă o umbră albă link-ului */
     }
 
-    /* Media Queries for Mobile Devices */
+    .footercredits {
+      position: relative;
+      text-shadow: 1px 1px 2px white; /* Adaugă o umbră albă textului */
+      margin-top: 20px; /* Ajustează această valoare pentru a muta textul mai sus */
+    }
+
+    @media (min-width: 914px) {
+      .footercredits {
+        top: 185px; /* Ajustează această valoare pentru ecrane mari, mutând textul mai sus */
+      }
+    }
+
     @media (max-width: 913px) {
       .footer-overlay {
         display: block;
@@ -72,9 +94,11 @@
 
       .grid {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 0 10px;
+        box-sizing: border-box;
       }
 
       .footercol1,
@@ -82,31 +106,12 @@
       .footercol3,
       .footercol4 {
         padding: 10px;
-        width: 100%;
+        width: calc(50% - 20px);
+        box-sizing: border-box;
+        margin: 10px 0;
       }
 
-      /* Schimbare ordine coloane pe ecranele mici */
-      .footercol1 {
-        order: 1;
-      }
-      
-      .footercol2 {
-        order: 2;
-      }
-      
-      .footercol3 {
-        order: 3;
-      }
-      
-      .footercol4 {
-        order: 4;
-      }
-
-      /* Specific pentru mutarea coloanei 4 sub coloana 1 */
-      .footercol4 {
-        order: 5;
-      }
-
+      /* Ajustează ordinea coloanelor dacă este necesar */
       .footercol1 {
         order: 1;
       }
@@ -121,6 +126,10 @@
 
       .footercol3 {
         order: 4;
+      }
+
+      .footercredits {
+        top: 10px; /* Ajustează această valoare pentru ecrane mici, mutând textul mai sus */
       }
     }
 
@@ -129,16 +138,19 @@
     .footercol3 .textwidget,
     .footercol4 .textwidget {
       padding-top: 0;
+      color: #000000;
+      text-shadow: 1px 1px 2px white;
     }
 
     .footercredits {
-      margin-top: 120px;
-      text-shadow: 1px 1px 2px black;
+      margin-top: 20px;
     }
 
     .footerclass p, .footerclass a {
-      text-shadow: 1px 1px 2px black;
+      color: #000000;
+      text-shadow: 1px 1px 2px white;
     }
+
   </style>
 </head>
 <body>
@@ -146,11 +158,8 @@
   <?php wp_footer(); ?>
 
   <footer id="containerfooter" class="footerclass" role="contentinfo">
-    <!-- Videoclipul de fundal -->
-    <video autoplay loop muted playsinline id="footer-video">
-      <source src="<?php echo get_template_directory_uri(); ?>/images/bus.mov" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <!-- Imaginea de fundal -->
+    <img src="<?php echo get_template_directory_uri(); ?>/images/footer9.jpg" id="footer-image" alt="Footer Background Image">
     
     <div class="footer-overlay"></div>
     
@@ -164,8 +173,8 @@
               <div class="textwidget">
                 RO 805300 Tecuci<br>
                 Transilvaniei, 7<br>
-                <a style="color: #FFFFFF" href="tel:0236 820 031">Tel: 0236 820 031</a><br>
-                <a style="color: #FFFFFF" href="mailto:autogara@gegi.ro">E-mail: autogara@gegi.ro</a>
+                <a href="tel:0236 820 031">Tel: 0236 820 031</a><br>
+                <a href="mailto:autogara@gegi.ro">E-mail: autogara@gegi.ro</a>
               </div>
             </aside>
           </div>
@@ -209,7 +218,7 @@
       </div>
 
       <!-- Footer Credits -->
-      <div class="footercredits text-center mt-8">
+      <div class="footercredits text-center">
         <p>&copy; 2024 Gegi Turism - Theme developed by <a href="https://linkedin.com/in/bogdan-gabriel-fratiman" target="_blank">Frățiman Bogdan-Gabriel</a></p>
       </div>
     </div>
