@@ -89,7 +89,7 @@
 
     @media (max-width: 913px) {
       .footer-overlay {
-        display: block;
+        display: none;
       }
 
       .grid {
