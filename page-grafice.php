@@ -111,7 +111,7 @@
 
 <!-- Hero Section -->
 <div class="relative h-96">
-    <div class="bg-cover bg-center absolute inset-0" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/grafice4.jpg'); filter: brightness(1.0);"></div>
+    <div class="bg-cover bg-center absolute inset-0" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/grafice.jpeg'); filter: brightness(1.0);"></div>
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="absolute inset-0 flex items-center justify-center">
         <div class="text-center text-white">

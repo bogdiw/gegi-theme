@@ -129,7 +129,7 @@
       }
 
       .footercredits {
-        top: 10px; /* Ajustează această valoare pentru ecrane mici, mutând textul mai sus */
+        top: 0px; /* Ajustează această valoare pentru ecrane mici, mutând textul mai sus */
       }
     }
 
@@ -143,7 +143,7 @@
     }
 
     .footercredits {
-      margin-top: 20px;
+      margin-top: 40px;
     }
 
     .footerclass p, .footerclass a {
