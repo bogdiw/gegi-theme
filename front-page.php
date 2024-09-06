@@ -11,7 +11,7 @@
 
     .hero-section {
         position: relative;
-        background-image: url('<?php echo get_template_directory_uri(); ?>/images/banner2.jpg');
+        background-image: url('https://gegi.ro/wp-content/uploads/2024/09/hero.jpeg');
         background-size: cover;
         background-position: center 80%;
         height: 24rem;
@@ -149,7 +149,7 @@
         <div class="services-grid">
             <!-- Service 1: Grafice Circulatie -->
             <div class="service-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/grafice.jpg" alt="Trasee si Grafice" class="w-full h-72 object-cover rounded-md">
+                <img src="https://gegi.ro/wp-content/uploads/2024/09/grafics.jpeg" alt="Trasee si Grafice" class="w-full h-72 object-cover rounded-md">
                 <div class="service-card-overlay">
                     <h4 class="text-2xl font-bold mb-4">Grafice Circulatie</h4>
                     <p class="text-base mb-6">
@@ -161,7 +161,7 @@
 
             <!-- Service 2: Inchiriere Autocare -->
             <div class="service-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/inchiriere-autocar.jpg" alt="Inchiriere Autocare" class="w-full h-72 object-cover rounded-md">
+                <img src="https://gegi.ro/wp-content/uploads/2024/09/rent-autocar.jpeg" alt="Inchiriere Autocare" class="w-full h-72 object-cover rounded-md">
                 <div class="service-card-overlay">
                     <h4 class="text-2xl font-bold mb-4">Inchiriere Autocare</h4>
                     <p class="text-base mb-6">
@@ -173,7 +173,7 @@
 
             <!-- Service 3: Transfer Aeroport -->
             <div class="service-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/trs3.jpg" alt="Transfer Aeroport" class="w-full h-72 object-cover rounded-md">
+                <img src="https://gegi.ro/wp-content/uploads/2024/09/trs.jpeg" alt="Transfer Aeroport" class="w-full h-72 object-cover rounded-md">
                 <div class="service-card-overlay">
                     <h4 class="text-2xl font-bold mb-4">Transfer Aeroport</h4>
                     <p class="text-base mb-6">
@@ -185,7 +185,7 @@
 
             <!-- Service 4: Inchirieri Auto -->
             <div class="service-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/rent2.jpg" alt="Inchirieri Auto" class="w-full h-72 object-cover rounded-md">
+                <img src="https://gegi.ro/wp-content/uploads/2024/09/rent-car.jpeg" alt="Inchirieri Auto" class="w-full h-72 object-cover rounded-md">
                 <div class="service-card-overlay">
                     <h4 class="text-2xl font-bold mb-4">Inchirieri Auto</h4>
                     <p class="text-base mb-6">
@@ -215,7 +215,7 @@
 
             <!-- Service 6: Cazare -->
             <div class="service-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/cazare.jpg" alt="Cazare" class="w-full h-72 object-cover rounded-md">
+                <img src="https://gegi.ro/wp-content/uploads/2024/09/cazare.jpeg" alt="Cazare" class="w-full h-72 object-cover rounded-md">
                 <div class="service-card-overlay">
                     <h4 class="text-2xl font-bold mb-4">Cazare</h4>
                     <p class="text-base mb-6">

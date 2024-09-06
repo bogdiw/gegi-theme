@@ -159,7 +159,7 @@
 
   <footer id="containerfooter" class="footerclass" role="contentinfo">
     <!-- Imaginea de fundal -->
-    <img src="<?php echo get_template_directory_uri(); ?>/images/footer9.jpg" id="footer-image" alt="Footer Background Image">
+    <img src="https://gegi.ro/wp-content/uploads/2024/09/footer.jpg" id="footer-image" alt="Footer Background Image">
     
     <div class="footer-overlay"></div>
     
@@ -223,6 +223,10 @@
       </div>
     </div>
   </footer>
-
+	
+	<!-- Start cookieyes banner -->
+	<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/1b08b72758d18f92b40cda83/script.js"></script>
+	<!-- End cookieyes banner -->
+	
 </body>
 </html>

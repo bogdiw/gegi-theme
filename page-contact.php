@@ -30,7 +30,7 @@
                     </div>
                     <div class="mb-6">
                         <h2 class="text-lg font-semibold text-gray-700 mb-2">
-                            Informatii miscare
+                            Informatii generale
                         </h2>
                         <a href="tel:0236820031" class="text-gray-500 text-sm leading-6 hover:text-gray-800">
                             0236 820 031
