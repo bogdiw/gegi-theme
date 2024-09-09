@@ -15,7 +15,9 @@
         background-size: cover;
         background-position: center 80%;
         height: 24rem;
+        margin-bottom: 10px;
     }
+
 
     .service-card img {
         transition: transform 0.3s ease;
@@ -128,6 +130,78 @@
         inset: 0;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
     }
+
+    /* Stiluri pentru containerul de simboluri */
+    .usp-section {
+        padding: 50px 20px;
+        padding-bottom: 10px;
+    }
+
+    .usp-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-around;
+    }
+
+    .usp-item {
+        text-align: center;
+        flex-basis: calc(25% - 30px);
+    }
+
+    .usp-icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .usp-icon {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .usp-title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .usp-text {
+        font-size: 0.875rem;
+        margin-bottom: 20px;
+        color: #666;
+    }
+
+    .usp-link {
+        color: #1E3A8A;
+        background-color: #c80404;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .usp-link:hover {
+        background-color: #991b1b;
+    }
+
+    @media (max-width: 768px) {
+        .usp-item {
+            flex-basis: calc(50% - 20px);
+            margin-bottom: 20px; /* Adaugă marjă între elemente */
+        }
+    }
+
+    @media (max-width: 500px) {
+        .usp-item {
+            flex-basis: 100%;
+            margin-bottom: 30px; /* Marjă mai mare pe ecranele mici */
+        }
+    }
 </style>
 
 <!-- Hero Section -->
@@ -142,6 +216,55 @@
         </div>
     </div>
 </div>
+
+<!-- Shortcut -->
+<section class="usp-section">
+    <div class="usp-container" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <div class="usp-item">
+            <div class="usp-icon-container">
+                <img src="https://www.transfero.ro/wp-content/uploads/2017/07/centura.svg" alt="Scaune confortabile" class="usp-icon">
+            </div>
+            <div class="usp-content">
+                <h2 class="usp-title">Scaune confortabile</h2>
+                <div class="usp-text">Scaune confortabile și spațiu generos pentru picioare</div>
+                <a href="#" class="usp-link" style="color: #FFFFFF">Afla mai multe</a>
+            </div>
+        </div>
+
+        <div class="usp-item">
+            <div class="usp-icon-container">
+                <img src="https://www.transfero.ro/wp-content/uploads/2017/08/wifi.svg" alt="Wi-Fi 4G" class="usp-icon">
+            </div>
+            <div class="usp-content">
+                <h2 class="usp-title">Wi-Fi 4G</h2>
+                <div class="usp-text">Navighează pe internet la viteza 4G. Prize USB disponibile</div>
+                <a href="#" class="usp-link" style="color: #FFFFFF">Afla mai multe</a>
+            </div>
+        </div>
+
+        <div class="usp-item">
+            <div class="usp-icon-container">
+                <img src="https://www.transfero.ro/wp-content/uploads/2017/07/bus.svg" alt="La timp" class="usp-icon">
+            </div>
+            <div class="usp-content">
+                <h2 class="usp-title">La timp</h2>
+                <div class="usp-text">Întotdeauna la timp la destinație</div>
+                <a href="#" class="usp-link" style="color: #FFFFFF">Afla mai multe</a>
+            </div>
+        </div>
+
+        <div class="usp-item">
+            <div class="usp-icon-container">
+                <img src="https://www.transfero.ro/wp-content/uploads/2017/07/bagaj.svg" alt="Spatiu bagaje" class="usp-icon">
+            </div>
+            <div class="usp-content">
+                <h2 class="usp-title">Spațiu pentru bagaje</h2>
+                <div class="usp-text">Autocarele noastre oferă suficient spațiu pentru bagaje</div>
+                <a href="#" class="usp-link" style="color: #FFFFFF">Afla mai multe</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Services Section -->
 <section class="w-full px-6 py-10">
