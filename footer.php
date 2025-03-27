@@ -14,7 +14,7 @@
     #containerfooter {
       position: relative;
       width: 100%;
-      height: 400px; /* Setează o înălțime fixă dacă este necesar */
+      height: 400px;
       z-index: 1;
     }
 
@@ -24,8 +24,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Asigură că imaginea acoperă întreaga zonă fără distorsiuni */
-      object-position: center 65%; /* Așază imaginea în centrul de jos al containerului */
+      object-fit: cover;
+      object-position: center 65%;
       z-index: -2;
     }
 
@@ -41,7 +41,7 @@
     }
 
     .footerclass {
-      color: #000000; /* Schimbă culoarea textului în negru */
+      color: #000000;
       padding: 1rem;
       position: relative;
       z-index: 2;
@@ -55,15 +55,15 @@
     .footercol3,
     .footercol4 {
       padding: 10px;
-      text-shadow: 1px 1px 2px white; /* Adaugă o umbră albă textului din coloane */
-      color: #000000; /* Asigură că textul din coloane este negru */
+      text-shadow: 1px 1px 2px white;
+      color: #000000;
       display: flex;
       align-items: flex-start;
     }
 
     .footercol1, .footercol4 {
       flex-basis: 20%;
-      padding-top: 20px; /* Ajustează această valoare după cum este necesar */
+      padding-top: 20px;
     }
 
     .footercol2, .footercol3 {
@@ -71,19 +71,19 @@
     }
 
     .footercredits a {
-      color: #FFFF00; /* Schimbă culoarea link-ului „Frățiman Bogdan-Gabriel” în galben */
-      text-shadow: 1px 1px 2px white; /* Adaugă o umbră albă link-ului */
+      color: #FFFF00;
+      text-shadow: 1px 1px 2px white;
     }
 
     .footercredits {
       position: relative;
-      text-shadow: 1px 1px 2px white; /* Adaugă o umbră albă textului */
-      margin-top: 20px; /* Ajustează această valoare pentru a muta textul mai sus */
+      text-shadow: 1px 1px 2px white;
+      margin-top: 20px;
     }
 
     @media (min-width: 914px) {
       .footercredits {
-        top: 185px; /* Ajustează această valoare pentru ecrane mari, mutând textul mai sus */
+        top: 185px;
       }
     }
 
@@ -111,7 +111,6 @@
         margin: 10px 0;
       }
 
-      /* Ajustează ordinea coloanelor dacă este necesar */
       .footercol1 {
         order: 1;
       }
@@ -129,7 +128,7 @@
       }
 
       .footercredits {
-        top: 0px; /* Ajustează această valoare pentru ecrane mici, mutând textul mai sus */
+        top: 0px;
       }
     }
 
@@ -196,7 +195,6 @@
           <div class="widget-first footer-widget">
             <aside class="widget widget_text">
               <div class="textwidget">
-                <!-- Additional content can be added here -->
               </div>
             </aside>
           </div>

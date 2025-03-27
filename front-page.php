@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <style>
-    /* CSS Custom pentru serviciile de hover */
     .service-card {
         position: relative;
         overflow: hidden;
@@ -131,7 +130,6 @@
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
     }
 
-    /* Stiluri pentru containerul de simboluri */
     .usp-section {
         padding: 50px 20px;
         padding-bottom: 10px;
@@ -192,14 +190,14 @@
     @media (max-width: 768px) {
         .usp-item {
             flex-basis: calc(50% - 20px);
-            margin-bottom: 20px; /* Adaugă marjă între elemente */
+            margin-bottom: 20px;
         }
     }
 
     @media (max-width: 500px) {
         .usp-item {
             flex-basis: 100%;
-            margin-bottom: 30px; /* Marjă mai mare pe ecranele mici */
+            margin-bottom: 30px;
         }
     }
 </style>
